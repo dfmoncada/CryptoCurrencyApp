@@ -1,0 +1,36 @@
+<%= form_with(model: @crypto) do |form| %>
+ 
+  <% if @crypto.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@crypto.errors.count, "error") %> prohibited
+        this crypto from being saved:
+      </h2>
+      <ul>
+        <% @crypto.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+ 
+  <p>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </p>
+ 
+  <p>
+    <%= form.label :short_name %><br>
+    <%= form.text_area :short_name %>
+  </p>
+
+  <p>
+    <%= form.label :date_of_birth %><br>
+    <%= form.date_field :date_of_birth %>
+  </p>
+ 
+  <p>
+    <%= form.submit %>
+  </p>
+ 
+<% end %>

@@ -1,0 +1,1469 @@
+Started GET "/cryptos/new" for 127.0.0.1 at 2018-02-04 13:54:03 -0500
+Processing by CryptosController#new as HTML
+  Rendering cryptos/new.html.erb within layouts/application
+  Rendered cryptos/new.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 997ms (Views: 811.8ms)
+
+
+Started GET "/cryptos/new" for 127.0.0.1 at 2018-02-04 13:56:04 -0500
+Processing by CryptosController#new as HTML
+  Rendering cryptos/new.html.erb within layouts/application
+  Rendered cryptos/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 26ms (Views: 24.3ms)
+
+
+Started GET "/cryptos/new" for 127.0.0.1 at 2018-02-04 13:57:15 -0500
+Processing by CryptosController#new as HTML
+  Rendering cryptos/new.html.erb within layouts/application
+  Rendered cryptos/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 37ms (Views: 35.4ms)
+
+
+Started POST "/cryptos" for 127.0.0.1 at 2018-02-04 13:57:29 -0500
+Processing by CryptosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UPffeYEeFHXBU4trpAPFJRRVfotbVSFNaQQcrfQnwImZ9wyXtK5uOE4xN95R/C+DQMvGRNNaDI8z3vJDgrbRBQ==", "crypto"=>{"name"=>"bitcoin", "short_name"=>"btc", "date_of_birth"=>"2007-01-01"}, "commit"=>"Save Crypto"}
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 1.3ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (29.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (30.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCryptos (20180204185858)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "cryptos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "short_name" varchar, "date_of_birth" date, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180204185858"]]
+  [1m[35m (37.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-02-04 18:59:19.144073"], ["updated_at", "2018-02-04 18:59:19.144073"]]
+  [1m[35m (5.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/cryptos" for 127.0.0.1 at 2018-02-04 14:00:56 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CryptosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UPffeYEeFHXBU4trpAPFJRRVfotbVSFNaQQcrfQnwImZ9wyXtK5uOE4xN95R/C+DQMvGRNNaDI8z3vJDgrbRBQ==", "crypto"=>{"name"=>"bitcoin", "short_name"=>"btc", "date_of_birth"=>"2007-01-01"}, "commit"=>"Save Crypto"}
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 1.1ms)
+
+
+  
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  
+app/controllers/cryptos_controller.rb:6:in `create'
+Started POST "/cryptos" for 127.0.0.1 at 2018-02-04 14:04:39 -0500
+Processing by CryptosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UPffeYEeFHXBU4trpAPFJRRVfotbVSFNaQQcrfQnwImZ9wyXtK5uOE4xN95R/C+DQMvGRNNaDI8z3vJDgrbRBQ==", "crypto"=>{"name"=>"bitcoin", "short_name"=>"btc", "date_of_birth"=>"2007-01-01"}, "commit"=>"Save Crypto"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "cryptos" ("name", "short_name", "date_of_birth", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "bitcoin"], ["short_name", "btc"], ["date_of_birth", "2007-01-01"], ["created_at", "2018-02-04 19:04:39.759903"], ["updated_at", "2018-02-04 19:04:39.759903"]]
+  [1m[35m (8.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/cryptos/1
+Completed 302 Found in 27ms (ActiveRecord: 10.8ms)
+
+
+Started GET "/cryptos/1" for 127.0.0.1 at 2018-02-04 14:04:39 -0500
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for CryptosController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.4) lib/rack/etag.rb:25:in `call'
+rack (2.0.4) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.4) lib/rack/head.rb:12:in `call'
+rack (2.0.4) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.4) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/cryptos" for 127.0.0.1 at 2018-02-04 14:06:00 -0500
+Processing by CryptosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UPffeYEeFHXBU4trpAPFJRRVfotbVSFNaQQcrfQnwImZ9wyXtK5uOE4xN95R/C+DQMvGRNNaDI8z3vJDgrbRBQ==", "crypto"=>{"name"=>"bitcoin", "short_name"=>"btc", "date_of_birth"=>"2007-01-01"}, "commit"=>"Save Crypto"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "cryptos" ("name", "short_name", "date_of_birth", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "bitcoin"], ["short_name", "btc"], ["date_of_birth", "2007-01-01"], ["created_at", "2018-02-04 19:06:00.242627"], ["updated_at", "2018-02-04 19:06:00.242627"]]
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/cryptos/2
+Completed 302 Found in 31ms (ActiveRecord: 12.9ms)
+
+
+Started GET "/cryptos/2" for 127.0.0.1 at 2018-02-04 14:06:00 -0500
+Processing by CryptosController#show as HTML
+  Parameters: {"id"=>"2"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant CryptosController::Article):
+  
+app/controllers/cryptos_controller.rb:13:in `show'
+Started GET "/cryptos/2" for 127.0.0.1 at 2018-02-04 14:07:50 -0500
+Processing by CryptosController#show as HTML
+  Parameters: {"id"=>"2"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant CryptosController::Article):
+  
+app/controllers/cryptos_controller.rb:13:in `show'
+Started GET "/cryptos/2" for 127.0.0.1 at 2018-02-04 14:08:36 -0500
+Processing by CryptosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCrypto Load (0.2ms)[0m  [1m[34mSELECT  "cryptos".* FROM "cryptos" WHERE "cryptos"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering cryptos/show.html.erb within layouts/application
+  Rendered cryptos/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 48ms (Views: 31.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/cryptos" for 127.0.0.1 at 2018-02-04 14:11:38 -0500
+Processing by CryptosController#index as HTML
+  Rendering cryptos/index.html.erb within layouts/application
+  [1m[36mCrypto Load (0.2ms)[0m  [1m[34mSELECT "cryptos".* FROM "cryptos"[0m
+  Rendered cryptos/index.html.erb within layouts/application (456.0ms)
+Completed 500 Internal Server Error in 463ms (ActiveRecord: 1.7ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `article' for #<#<Class:0x00007fdfb4774a20>:0x00007fdfb8f18fe8>):
+     9:  
+    10:   <% @cryptos.each do |crypto| %>
+    11:     <tr>
+    12:       <td><%= article.name %></td>
+    13:       <td><%= article.short_name %></td>
+    14:       <td><%= article.date_of_birth %></td>
+    15:       <td><%= link_to 'Show', crypto_path(crypto) %></td>
+  
+app/views/cryptos/index.html.erb:12:in `block in _app_views_cryptos_index_html_erb___4464682482448533988_70299391076620'
+app/views/cryptos/index.html.erb:10:in `_app_views_cryptos_index_html_erb___4464682482448533988_70299391076620'
+Started GET "/cryptos" for 127.0.0.1 at 2018-02-04 14:11:52 -0500
+Processing by CryptosController#index as HTML
+  Rendering cryptos/index.html.erb within layouts/application
+  [1m[36mCrypto Load (0.2ms)[0m  [1m[34mSELECT "cryptos".* FROM "cryptos"[0m
+  Rendered cryptos/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 36ms (Views: 34.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-04 14:14:11 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/tankynote/.rvm/gems/ruby-2.5.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/tankynote/.rvm/gems/ruby-2.5.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (2.8ms)
+Completed 200 OK in 6ms (Views: 4.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-04 14:15:29 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/tankynote/.rvm/gems/ruby-2.5.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/tankynote/.rvm/gems/ruby-2.5.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (2.3ms)
+Completed 200 OK in 5ms (Views: 3.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-04 14:15:31 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/tankynote/.rvm/gems/ruby-2.5.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/tankynote/.rvm/gems/ruby-2.5.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (1.6ms)
+Completed 200 OK in 4ms (Views: 2.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-04 14:15:36 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/tankynote/.rvm/gems/ruby-2.5.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/tankynote/.rvm/gems/ruby-2.5.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (1.9ms)
+Completed 200 OK in 4ms (Views: 3.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-04 14:15:36 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/tankynote/.rvm/gems/ruby-2.5.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/tankynote/.rvm/gems/ruby-2.5.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (3.1ms)
+Completed 200 OK in 7ms (Views: 5.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-04 14:17:07 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/tankynote/.rvm/gems/ruby-2.5.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/tankynote/.rvm/gems/ruby-2.5.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (4.3ms)
+Completed 200 OK in 19ms (Views: 10.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-04 14:18:40 -0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (8.3ms)
+Completed 500 Internal Server Error in 13ms
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"index", :controller=>"Cryptos"}):
+    1: <h1>Welcome to Cryptos</h1>
+    2: <%= link_to 'My Crypto', controller: 'Cryptos' %>
+  
+app/views/welcome/index.html.erb:2:in `_app_views_welcome_index_html_erb___1721802724213030327_70276269396760'
+Started GET "/" for 127.0.0.1 at 2018-02-04 14:19:34 -0500
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 387ms (Views: 386.0ms)
+
+
+Started GET "/cryptos" for 127.0.0.1 at 2018-02-04 14:19:38 -0500
+Processing by CryptosController#index as HTML
+  Rendering cryptos/index.html.erb within layouts/application
+  [1m[36mCrypto Load (0.2ms)[0m  [1m[34mSELECT "cryptos".* FROM "cryptos"[0m
+  Rendered cryptos/index.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 39ms (Views: 35.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/cryptos/1" for 127.0.0.1 at 2018-02-04 14:19:40 -0500
+Processing by CryptosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCrypto Load (0.3ms)[0m  [1m[34mSELECT  "cryptos".* FROM "cryptos" WHERE "cryptos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering cryptos/show.html.erb within layouts/application
+  Rendered cryptos/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 27ms (Views: 23.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cryptos/2" for 127.0.0.1 at 2018-02-04 14:19:42 -0500
+Processing by CryptosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCrypto Load (0.1ms)[0m  [1m[34mSELECT  "cryptos".* FROM "cryptos" WHERE "cryptos"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering cryptos/show.html.erb within layouts/application
+  Rendered cryptos/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 28ms (Views: 25.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/cryptos" for 127.0.0.1 at 2018-02-04 14:20:20 -0500
+Processing by CryptosController#index as HTML
+  Rendering cryptos/index.html.erb within layouts/application
+  [1m[36mCrypto Load (0.2ms)[0m  [1m[34mSELECT "cryptos".* FROM "cryptos"[0m
+  Rendered cryptos/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cryptos" for 127.0.0.1 at 2018-02-04 14:20:37 -0500
+Processing by CryptosController#index as HTML
+  Rendering cryptos/index.html.erb within layouts/application
+  [1m[36mCrypto Load (0.2ms)[0m  [1m[34mSELECT "cryptos".* FROM "cryptos"[0m
+  Rendered cryptos/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 20ms (Views: 18.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cryptos" for 127.0.0.1 at 2018-02-04 14:20:47 -0500
+Processing by CryptosController#index as HTML
+  Rendering cryptos/index.html.erb within layouts/application
+  [1m[36mCrypto Load (0.2ms)[0m  [1m[34mSELECT "cryptos".* FROM "cryptos"[0m
+  Rendered cryptos/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 28ms (Views: 26.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cryptos" for 127.0.0.1 at 2018-02-04 14:20:52 -0500
+Processing by CryptosController#index as HTML
+  Rendering cryptos/index.html.erb within layouts/application
+  [1m[36mCrypto Load (0.3ms)[0m  [1m[34mSELECT "cryptos".* FROM "cryptos"[0m
+  Rendered cryptos/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 38ms (Views: 36.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cryptos" for 127.0.0.1 at 2018-02-04 14:21:00 -0500
+Processing by CryptosController#index as HTML
+  Rendering cryptos/index.html.erb within layouts/application
+  [1m[36mCrypto Load (0.2ms)[0m  [1m[34mSELECT "cryptos".* FROM "cryptos"[0m
+  Rendered cryptos/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 32ms (Views: 31.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cryptos" for 127.0.0.1 at 2018-02-04 14:21:11 -0500
+Processing by CryptosController#index as HTML
+  Rendering cryptos/index.html.erb within layouts/application
+  [1m[36mCrypto Load (0.2ms)[0m  [1m[34mSELECT "cryptos".* FROM "cryptos"[0m
+  Rendered cryptos/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 43ms (Views: 41.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cryptos" for 127.0.0.1 at 2018-02-04 14:22:20 -0500
+Processing by CryptosController#index as HTML
+  Rendering cryptos/index.html.erb within layouts/application
+  [1m[36mCrypto Load (0.2ms)[0m  [1m[34mSELECT "cryptos".* FROM "cryptos"[0m
+  Rendered cryptos/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 24ms (Views: 23.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cryptos/new" for 127.0.0.1 at 2018-02-04 14:22:23 -0500
+Processing by CryptosController#new as HTML
+  Rendering cryptos/new.html.erb within layouts/application
+  Rendered cryptos/new.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 32ms (Views: 31.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cryptos" for 127.0.0.1 at 2018-02-04 14:22:25 -0500
+Processing by CryptosController#index as HTML
+  Rendering cryptos/index.html.erb within layouts/application
+  [1m[36mCrypto Load (0.2ms)[0m  [1m[34mSELECT "cryptos".* FROM "cryptos"[0m
+  Rendered cryptos/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 30ms (Views: 28.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cryptos/1" for 127.0.0.1 at 2018-02-04 14:22:26 -0500
+Processing by CryptosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCrypto Load (0.2ms)[0m  [1m[34mSELECT  "cryptos".* FROM "cryptos" WHERE "cryptos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering cryptos/show.html.erb within layouts/application
+  Rendered cryptos/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 27ms (Views: 24.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cryptos" for 127.0.0.1 at 2018-02-04 14:22:28 -0500
+Processing by CryptosController#index as HTML
+  Rendering cryptos/index.html.erb within layouts/application
+  [1m[36mCrypto Load (0.3ms)[0m  [1m[34mSELECT "cryptos".* FROM "cryptos"[0m
+  Rendered cryptos/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 34ms (Views: 32.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cryptos/new" for 127.0.0.1 at 2018-02-04 14:23:21 -0500
+Processing by CryptosController#new as HTML
+  Rendering cryptos/new.html.erb within layouts/application
+  Rendered cryptos/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 36ms (Views: 34.6ms)
+
+
+Started POST "/cryptos" for 127.0.0.1 at 2018-02-04 14:23:32 -0500
+Processing by CryptosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4+Y+zY/j4u6oM4pB4rIkPkY4EJfoAAzS3PMGXiqSnIn1DqWb05bsyDazMPettDHCVI8NJZqWmX1SD+AMhwHcGg==", "crypto"=>{"name"=>"eth", "short_name"=>"Ethereum", "date_of_birth"=>""}, "commit"=>"Save Crypto"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 1.5ms)
+
+
+  
+NoMethodError (undefined method `title' for #<Crypto:0x00007fd4ed9b9640>):
+  
+app/controllers/cryptos_controller.rb:21:in `create'
+Started POST "/cryptos" for 127.0.0.1 at 2018-02-04 14:23:46 -0500
+Processing by CryptosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4+Y+zY/j4u6oM4pB4rIkPkY4EJfoAAzS3PMGXiqSnIn1DqWb05bsyDazMPettDHCVI8NJZqWmX1SD+AMhwHcGg==", "crypto"=>{"name"=>"etherei,", "short_name"=>"Ethereum", "date_of_birth"=>""}, "commit"=>"Save Crypto"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.1ms)
+
+
+  
+NoMethodError (undefined method `title' for #<Crypto:0x00007fd4f82e0020>):
+  
+app/controllers/cryptos_controller.rb:21:in `create'
+Started POST "/cryptos" for 127.0.0.1 at 2018-02-04 14:25:16 -0500
+Processing by CryptosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4+Y+zY/j4u6oM4pB4rIkPkY4EJfoAAzS3PMGXiqSnIn1DqWb05bsyDazMPettDHCVI8NJZqWmX1SD+AMhwHcGg==", "crypto"=>{"name"=>"eth", "short_name"=>"Ethereum", "date_of_birth"=>""}, "commit"=>"Save Crypto"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Redirected to http://127.0.0.1:3000/cryptos
+Completed 302 Found in 16ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/cryptos" for 127.0.0.1 at 2018-02-04 14:25:16 -0500
+Processing by CryptosController#index as HTML
+  Rendering cryptos/index.html.erb within layouts/application
+  [1m[36mCrypto Load (0.7ms)[0m  [1m[34mSELECT "cryptos".* FROM "cryptos"[0m
+  Rendered cryptos/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 24ms (Views: 21.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/cryptos/new" for 127.0.0.1 at 2018-02-04 14:25:20 -0500
+Processing by CryptosController#new as HTML
+  Rendering cryptos/new.html.erb within layouts/application
+  Rendered cryptos/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 24ms (Views: 22.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/cryptos" for 127.0.0.1 at 2018-02-04 14:25:26 -0500
+Processing by CryptosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"v9Ua3kB/FDUzCQ8I8YznXNGat94yBGQ1FBl1KrcnoMypPYGIHAoaE62Jtb6+ivKgwy2qbECS8Zqa5ZN4GrTgXw==", "crypto"=>{"name"=>"Ethereum", "short_name"=>"eth", "date_of_birth"=>""}, "commit"=>"Save Crypto"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[32mINSERT INTO "cryptos" ("name", "short_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Ethereum"], ["short_name", "eth"], ["created_at", "2018-02-04 19:25:26.455517"], ["updated_at", "2018-02-04 19:25:26.455517"]]
+  [1m[35m (8.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/cryptos/3
+Completed 302 Found in 15ms (ActiveRecord: 10.5ms)
+
+
+Started GET "/cryptos/3" for 127.0.0.1 at 2018-02-04 14:25:26 -0500
+Processing by CryptosController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCrypto Load (0.3ms)[0m  [1m[34mSELECT  "cryptos".* FROM "cryptos" WHERE "cryptos"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering cryptos/show.html.erb within layouts/application
+  Rendered cryptos/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 27ms (Views: 24.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cryptos" for 127.0.0.1 at 2018-02-04 14:25:31 -0500
+Processing by CryptosController#index as HTML
+  Rendering cryptos/index.html.erb within layouts/application
+  [1m[36mCrypto Load (0.2ms)[0m  [1m[34mSELECT "cryptos".* FROM "cryptos"[0m
+  Rendered cryptos/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 32ms (Views: 28.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cryptos/new" for 127.0.0.1 at 2018-02-04 14:26:53 -0500
+Processing by CryptosController#new as HTML
+  Rendering cryptos/new.html.erb within layouts/application
+  Rendered cryptos/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 33ms (Views: 31.8ms)
+
+
+Started POST "/cryptos" for 127.0.0.1 at 2018-02-04 14:27:02 -0500
+Processing by CryptosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"liFRHs+ANh+CdwSotvNAZah8opVYGs28VdeMZ+M99QCAycpIk/U4ORz3vh759VWZusu/JyqMWBPbK2o1Tq61kw==", "crypto"=>{"name"=>"arch", "short_name"=>"arch", "date_of_birth"=>""}, "commit"=>"Save Crypto"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  Rendering cryptos/new.html.erb within layouts/application
+  Rendered cryptos/new.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 60ms (Views: 40.8ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/cryptos" for 127.0.0.1 at 2018-02-04 14:27:05 -0500
+Processing by CryptosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"x4HT64vMCGOyNFQExX8Lqv4/IjhYBbodBghfdf5PM70OgQAFvnxyLj1W6LEwgOEMqqGa99AKl99c0rGbiN4iMQ==", "crypto"=>{"name"=>"arch", "short_name"=>"arch", "date_of_birth"=>""}, "commit"=>"Save Crypto"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering cryptos/new.html.erb within layouts/application
+  Rendered cryptos/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 27ms (Views: 24.2ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/cryptos" for 127.0.0.1 at 2018-02-04 14:27:10 -0500
+Processing by CryptosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"liFRHs+ANh+CdwSotvNAZah8opVYGs28VdeMZ+M99QCAycpIk/U4ORz3vh759VWZusu/JyqMWBPbK2o1Tq61kw==", "crypto"=>{"name"=>"arch", "short_name"=>"arch", "date_of_birth"=>""}, "commit"=>"Save Crypto"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering cryptos/new.html.erb within layouts/application
+  Rendered cryptos/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 38ms (Views: 35.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cryptos" for 127.0.0.1 at 2018-02-04 14:29:11 -0500
+Processing by CryptosController#index as HTML
+  Rendering cryptos/index.html.erb within layouts/application
+  [1m[36mCrypto Load (0.2ms)[0m  [1m[34mSELECT "cryptos".* FROM "cryptos"[0m
+  Rendered cryptos/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 24ms (Views: 22.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cryptos/new" for 127.0.0.1 at 2018-02-04 14:29:13 -0500
+Processing by CryptosController#new as HTML
+  Rendering cryptos/new.html.erb within layouts/application
+  Rendered cryptos/new.html.erb within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <h1>New Crypto</h1>
+    2: <%= form_with scope: :crypto, url: cryptos_path, local: true do |form| %>
+    3:   <% if @crypto.errors.any? %>
+    4:     <div id="error_explanation">
+    5:       <h2>
+    6:         <%= pluralize(@crypto.errors.count, "error") %> prohibited
+  
+app/views/cryptos/new.html.erb:3:in `block in _app_views_cryptos_new_html_erb___830592029063441357_70276301837260'
+app/views/cryptos/new.html.erb:2:in `_app_views_cryptos_new_html_erb___830592029063441357_70276301837260'
+Started GET "/cryptos" for 127.0.0.1 at 2018-02-04 14:31:22 -0500
+Processing by CryptosController#index as HTML
+  Rendering cryptos/index.html.erb within layouts/application
+  [1m[36mCrypto Load (0.3ms)[0m  [1m[34mSELECT "cryptos".* FROM "cryptos"[0m
+  Rendered cryptos/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 33ms (Views: 31.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cryptos/new" for 127.0.0.1 at 2018-02-04 14:31:24 -0500
+Processing by CryptosController#new as HTML
+  Rendering cryptos/new.html.erb within layouts/application
+  Rendered cryptos/new.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <h1>New Crypto</h1>
+    2: <%= form_with scope: :crypto, url: cryptos_path, local: true do |form| %>
+    3:   <% if @crypto.errors.any? %>
+    4:     <div id="error_explanation">
+    5:       <h2>
+    6:         <%= pluralize(@crypto.errors.count, "error") %> prohibited
+  
+app/views/cryptos/new.html.erb:3:in `block in _app_views_cryptos_new_html_erb___830592029063441357_70276302987060'
+app/views/cryptos/new.html.erb:2:in `_app_views_cryptos_new_html_erb___830592029063441357_70276302987060'
+Started GET "/cryptos/new" for 127.0.0.1 at 2018-02-04 14:31:57 -0500
+Processing by CryptosController#new as HTML
+  Rendering cryptos/new.html.erb within layouts/application
+  Rendered cryptos/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 56ms (Views: 40.3ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/cryptos" for 127.0.0.1 at 2018-02-04 14:32:06 -0500
+Processing by CryptosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"p3F6olOAwg1f2D8N5q+EOJmJvy08Ekq+AqX3Dim0FoVucalMZjC4QNC6g7gTUG6ezRcH4rQdZ3xYfxngXyUHCQ==", "crypto"=>{"name"=>"arch", "short_name"=>"arch", "date_of_birth"=>""}, "commit"=>"Save Crypto"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering cryptos/new.html.erb within layouts/application
+  Rendered cryptos/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 33ms (Views: 30.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cryptos" for 127.0.0.1 at 2018-02-04 14:37:54 -0500
+Processing by CryptosController#index as HTML
+  Rendering cryptos/index.html.erb within layouts/application
+  [1m[36mCrypto Load (0.1ms)[0m  [1m[34mSELECT "cryptos".* FROM "cryptos"[0m
+  Rendered cryptos/index.html.erb within layouts/application (399.7ms)
+Completed 500 Internal Server Error in 407ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `article' for #<#<Class:0x00007fd4ecf81678>:0x00007fd4ecf74f68>):
+    16:       <td><%= crypto.short_name %></td>
+    17:       <td><%= crypto.date_of_birth %></td>
+    18:       <td><%= link_to 'Show', crypto_path(crypto) %></td>
+    19:       <td><%= link_to 'Edit', edit_article_path(article) %></td>
+    20:     </tr>
+    21:   <% end %>
+    22: </table>
+  
+app/views/cryptos/index.html.erb:19:in `block in _app_views_cryptos_index_html_erb__4409719610219446669_70276242740500'
+app/views/cryptos/index.html.erb:13:in `_app_views_cryptos_index_html_erb__4409719610219446669_70276242740500'
+Started GET "/cryptos" for 127.0.0.1 at 2018-02-04 14:38:13 -0500
+Processing by CryptosController#index as HTML
+  Rendering cryptos/index.html.erb within layouts/application
+  [1m[36mCrypto Load (0.3ms)[0m  [1m[34mSELECT "cryptos".* FROM "cryptos"[0m
+  Rendered cryptos/index.html.erb within layouts/application (272.6ms)
+Completed 500 Internal Server Error in 278ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `edit_crypt_path' for #<#<Class:0x00007fd4ecf81678>:0x00007fd4f0b23320>
+Did you mean?  edit_crypto_path):
+    16:       <td><%= crypto.short_name %></td>
+    17:       <td><%= crypto.date_of_birth %></td>
+    18:       <td><%= link_to 'Show', crypto_path(crypto) %></td>
+    19:       <td><%= link_to 'Edit', edit_crypt_path(crypto) %></td>
+    20:     </tr>
+    21:   <% end %>
+    22: </table>
+  
+app/views/cryptos/index.html.erb:19:in `block in _app_views_cryptos_index_html_erb__4409719610219446669_70276274003520'
+app/views/cryptos/index.html.erb:13:in `_app_views_cryptos_index_html_erb__4409719610219446669_70276274003520'
+Started GET "/cryptos" for 127.0.0.1 at 2018-02-04 14:38:29 -0500
+Processing by CryptosController#index as HTML
+  Rendering cryptos/index.html.erb within layouts/application
+  [1m[36mCrypto Load (0.3ms)[0m  [1m[34mSELECT "cryptos".* FROM "cryptos"[0m
+  Rendered cryptos/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 34ms (Views: 31.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cryptos" for 127.0.0.1 at 2018-02-04 14:38:29 -0500
+Processing by CryptosController#index as HTML
+  Rendering cryptos/index.html.erb within layouts/application
+  [1m[36mCrypto Load (10.0ms)[0m  [1m[34mSELECT "cryptos".* FROM "cryptos"[0m
+  Rendered cryptos/index.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 48ms (Views: 36.9ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/cryptos/3/edit" for 127.0.0.1 at 2018-02-04 14:38:32 -0500
+Processing by CryptosController#edit as HTML
+  Parameters: {"id"=>"3"}
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `parmas' for #<Class:0x00007fd4ecfae858>):
+  
+app/controllers/cryptos_controller.rb:19:in `edit'
+Started GET "/cryptos/3/edit" for 127.0.0.1 at 2018-02-04 14:38:55 -0500
+Processing by CryptosController#edit as HTML
+  Parameters: {"id"=>"3"}
+Completed 500 Internal Server Error in 12ms
+
+
+  
+NoMethodError (undefined method `params' for Crypto (call 'Crypto.connection' to establish a connection):Class):
+  
+app/controllers/cryptos_controller.rb:19:in `edit'
+Started GET "/cryptos/3/edit" for 127.0.0.1 at 2018-02-04 14:38:59 -0500
+Processing by CryptosController#edit as HTML
+  Parameters: {"id"=>"3"}
+Completed 500 Internal Server Error in 8ms
+
+
+  
+NoMethodError (undefined method `params' for Crypto (call 'Crypto.connection' to establish a connection):Class):
+  
+app/controllers/cryptos_controller.rb:19:in `edit'
+Started GET "/cryptos/3/edit" for 127.0.0.1 at 2018-02-04 14:39:18 -0500
+Processing by CryptosController#edit as HTML
+  Parameters: {"id"=>"3"}
+Completed 500 Internal Server Error in 15ms
+
+
+  
+NoMethodError (undefined method `params' for Crypto (call 'Crypto.connection' to establish a connection):Class):
+  
+app/controllers/cryptos_controller.rb:19:in `edit'
+Started GET "/cryptos/3/edit" for 127.0.0.1 at 2018-02-04 14:39:20 -0500
+Processing by CryptosController#edit as HTML
+  Parameters: {"id"=>"3"}
+Completed 500 Internal Server Error in 8ms
+
+
+  
+NoMethodError (undefined method `params' for Crypto (call 'Crypto.connection' to establish a connection):Class):
+  
+app/controllers/cryptos_controller.rb:19:in `edit'
+Started GET "/cryptos" for 127.0.0.1 at 2018-02-04 14:39:38 -0500
+Processing by CryptosController#index as HTML
+  Rendering cryptos/index.html.erb within layouts/application
+  [1m[36mCrypto Load (0.3ms)[0m  [1m[34mSELECT "cryptos".* FROM "cryptos"[0m
+  Rendered cryptos/index.html.erb within layouts/application (21.1ms)
+Completed 200 OK in 63ms (Views: 57.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/cryptos/3/edit" for 127.0.0.1 at 2018-02-04 14:39:42 -0500
+Processing by CryptosController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCrypto Load (0.3ms)[0m  [1m[34mSELECT  "cryptos".* FROM "cryptos" WHERE "cryptos"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering cryptos/edit.html.erb within layouts/application
+  Rendered cryptos/edit.html.erb within layouts/application (4.3ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 1.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    2:  
+    3: <%= form_with(model: @cyrpto) do |form| %>
+    4:  
+    5:   <% if @cyrpto.errors.any? %>
+    6:     <div id="error_explanation">
+    7:       <h2>
+    8:         <%= pluralize(@cyrpto.errors.count, "error") %> prohibited
+  
+app/views/cryptos/edit.html.erb:5:in `block in _app_views_cryptos_edit_html_erb__4046720168704049273_70276168299960'
+app/views/cryptos/edit.html.erb:3:in `_app_views_cryptos_edit_html_erb__4046720168704049273_70276168299960'
+Started GET "/cryptos" for 127.0.0.1 at 2018-02-04 14:40:22 -0500
+Processing by CryptosController#index as HTML
+  Rendering cryptos/index.html.erb within layouts/application
+  [1m[36mCrypto Load (0.1ms)[0m  [1m[34mSELECT "cryptos".* FROM "cryptos"[0m
+  Rendered cryptos/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 70ms (Views: 64.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/cryptos" for 127.0.0.1 at 2018-02-04 14:40:23 -0500
+Processing by CryptosController#index as HTML
+  Rendering cryptos/index.html.erb within layouts/application
+  [1m[36mCrypto Load (0.3ms)[0m  [1m[34mSELECT "cryptos".* FROM "cryptos"[0m
+  Rendered cryptos/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 32ms (Views: 30.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cryptos/3/edit" for 127.0.0.1 at 2018-02-04 14:40:25 -0500
+Processing by CryptosController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCrypto Load (0.3ms)[0m  [1m[34mSELECT  "cryptos".* FROM "cryptos" WHERE "cryptos"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering cryptos/edit.html.erb within layouts/application
+  Rendered cryptos/edit.html.erb within layouts/application (2.5ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    2:  
+    3: <%= form_with(model: @cyrpto) do |form| %>
+    4:  
+    5:   <% if @cyrpto.errors.any? %>
+    6:     <div id="error_explanation">
+    7:       <h2>
+    8:         <%= pluralize(@cyrpto.errors.count, "error") %> prohibited
+  
+app/views/cryptos/edit.html.erb:5:in `block in _app_views_cryptos_edit_html_erb__4046720168704049273_70276274672140'
+app/views/cryptos/edit.html.erb:3:in `_app_views_cryptos_edit_html_erb__4046720168704049273_70276274672140'
+Started GET "/cryptos" for 127.0.0.1 at 2018-02-04 14:40:41 -0500
+Processing by CryptosController#index as HTML
+  Rendering cryptos/index.html.erb within layouts/application
+  [1m[36mCrypto Load (0.3ms)[0m  [1m[34mSELECT "cryptos".* FROM "cryptos"[0m
+  Rendered cryptos/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 29ms (Views: 27.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cryptos/1/edit" for 127.0.0.1 at 2018-02-04 14:40:44 -0500
+Processing by CryptosController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCrypto Load (0.2ms)[0m  [1m[34mSELECT  "cryptos".* FROM "cryptos" WHERE "cryptos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering cryptos/edit.html.erb within layouts/application
+  Rendered cryptos/edit.html.erb within layouts/application (6.1ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    2:  
+    3: <%= form_with(model: @cyrpto) do |form| %>
+    4:  
+    5:   <% if @cyrpto.errors.any? %>
+    6:     <div id="error_explanation">
+    7:       <h2>
+    8:         <%= pluralize(@cyrpto.errors.count, "error") %> prohibited
+  
+app/views/cryptos/edit.html.erb:5:in `block in _app_views_cryptos_edit_html_erb__4046720168704049273_70276241002820'
+app/views/cryptos/edit.html.erb:3:in `_app_views_cryptos_edit_html_erb__4046720168704049273_70276241002820'
+Started GET "/cryptos" for 127.0.0.1 at 2018-02-04 14:40:45 -0500
+Processing by CryptosController#index as HTML
+  Rendering cryptos/index.html.erb within layouts/application
+  [1m[36mCrypto Load (0.3ms)[0m  [1m[34mSELECT "cryptos".* FROM "cryptos"[0m
+  Rendered cryptos/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 55ms (Views: 53.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cryptos/1" for 127.0.0.1 at 2018-02-04 14:41:24 -0500
+Processing by CryptosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCrypto Load (0.2ms)[0m  [1m[34mSELECT  "cryptos".* FROM "cryptos" WHERE "cryptos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering cryptos/show.html.erb within layouts/application
+  Rendered cryptos/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 26ms (Views: 23.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cryptos/1/edit" for 127.0.0.1 at 2018-02-04 14:41:27 -0500
+Processing by CryptosController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCrypto Load (0.2ms)[0m  [1m[34mSELECT  "cryptos".* FROM "cryptos" WHERE "cryptos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering cryptos/edit.html.erb within layouts/application
+  Rendered cryptos/edit.html.erb within layouts/application (3.2ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    2:  
+    3: <%= form_with(model: @cyrpto) do |form| %>
+    4:  
+    5:   <% if @cyrpto.errors.any? %>
+    6:     <div id="error_explanation">
+    7:       <h2>
+    8:         <%= pluralize(@cyrpto.errors.count, "error") %> prohibited
+  
+app/views/cryptos/edit.html.erb:5:in `block in _app_views_cryptos_edit_html_erb__4046720168704049273_70276274135600'
+app/views/cryptos/edit.html.erb:3:in `_app_views_cryptos_edit_html_erb__4046720168704049273_70276274135600'
+Started GET "/cryptos/1/edit" for 127.0.0.1 at 2018-02-04 14:41:40 -0500
+Processing by CryptosController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCrypto Load (0.4ms)[0m  [1m[34mSELECT  "cryptos".* FROM "cryptos" WHERE "cryptos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering cryptos/edit.html.erb within layouts/application
+  Rendered cryptos/edit.html.erb within layouts/application (11.5ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    2:  
+    3: <%= form_with(model: @crypto) do |form| %>
+    4:  
+    5:   <% if @cyrpto.errors.any? %>
+    6:     <div id="error_explanation">
+    7:       <h2>
+    8:         <%= pluralize(@cyrpto.errors.count, "error") %> prohibited
+  
+app/views/cryptos/edit.html.erb:5:in `block in _app_views_cryptos_edit_html_erb__4046720168704049273_70276169922420'
+app/views/cryptos/edit.html.erb:3:in `_app_views_cryptos_edit_html_erb__4046720168704049273_70276169922420'
+Started GET "/cryptos/1/edit" for 127.0.0.1 at 2018-02-04 14:41:43 -0500
+Processing by CryptosController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCrypto Load (0.2ms)[0m  [1m[34mSELECT  "cryptos".* FROM "cryptos" WHERE "cryptos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering cryptos/edit.html.erb within layouts/application
+  Rendered cryptos/edit.html.erb within layouts/application (5.2ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    2:  
+    3: <%= form_with(model: @crypto) do |form| %>
+    4:  
+    5:   <% if @cyrpto.errors.any? %>
+    6:     <div id="error_explanation">
+    7:       <h2>
+    8:         <%= pluralize(@cyrpto.errors.count, "error") %> prohibited
+  
+app/views/cryptos/edit.html.erb:5:in `block in _app_views_cryptos_edit_html_erb__4046720168704049273_70276274249980'
+app/views/cryptos/edit.html.erb:3:in `_app_views_cryptos_edit_html_erb__4046720168704049273_70276274249980'
+Started GET "/cryptos/1/edit" for 127.0.0.1 at 2018-02-04 14:42:01 -0500
+Processing by CryptosController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCrypto Load (0.3ms)[0m  [1m[34mSELECT  "cryptos".* FROM "cryptos" WHERE "cryptos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering cryptos/edit.html.erb within layouts/application
+  Rendered cryptos/edit.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 67ms (Views: 62.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cryptos/1/edit" for 127.0.0.1 at 2018-02-04 14:42:12 -0500
+Processing by CryptosController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCrypto Load (0.3ms)[0m  [1m[34mSELECT  "cryptos".* FROM "cryptos" WHERE "cryptos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering cryptos/edit.html.erb within layouts/application
+  Rendered cryptos/edit.html.erb within layouts/application (245.7ms)
+Completed 500 Internal Server Error in 252ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `date_area' for #<ActionView::Helpers::FormBuilder:0x00007fd4f0d09860>
+Did you mean?  date_field):
+    28: 
+    29:   <p>
+    30:     <%= form.label :date_of_birth %><br>
+    31:     <%= form.date_area :date_of_birth %>
+    32:   </p>
+    33:  
+    34:   <p>
+  
+app/views/cryptos/edit.html.erb:31:in `block in _app_views_cryptos_edit_html_erb__4046720168704049273_70276169703500'
+app/views/cryptos/edit.html.erb:3:in `_app_views_cryptos_edit_html_erb__4046720168704049273_70276169703500'
+Started GET "/cryptos/1/edit" for 127.0.0.1 at 2018-02-04 14:42:24 -0500
+Processing by CryptosController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCrypto Load (0.2ms)[0m  [1m[34mSELECT  "cryptos".* FROM "cryptos" WHERE "cryptos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering cryptos/edit.html.erb within layouts/application
+  Rendered cryptos/edit.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 39ms (Views: 36.8ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/cryptos/1" for 127.0.0.1 at 2018-02-04 15:42:26 -0500
+Processing by CryptosController#update as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Cjm89bziPUFmavm48DuJ1lKta+eyIoIBPreedtB9dHfDOW8biVJHDOkIRQ0FxGNwBjPTKDotr8NkbXCYpuxl+w==", "crypto"=>{"name"=>"bitcoinCash", "short_name"=>"btc", "date_of_birth"=>"2007-01-01"}, "commit"=>"Update Crypto", "id"=>"1"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant CryptosController::Article):
+  
+app/controllers/cryptos_controller.rb:35:in `update'
+Started PATCH "/cryptos/1" for 127.0.0.1 at 2018-02-04 15:42:29 -0500
+Processing by CryptosController#update as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Cjm89bziPUFmavm48DuJ1lKta+eyIoIBPreedtB9dHfDOW8biVJHDOkIRQ0FxGNwBjPTKDotr8NkbXCYpuxl+w==", "crypto"=>{"name"=>"bitcoinCash", "short_name"=>"btc", "date_of_birth"=>"2007-01-01"}, "commit"=>"Update Crypto", "id"=>"1"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant CryptosController::Article):
+  
+app/controllers/cryptos_controller.rb:35:in `update'
+Started GET "/cryptos" for 127.0.0.1 at 2018-02-04 15:42:30 -0500
+Processing by CryptosController#index as HTML
+  Rendering cryptos/index.html.erb within layouts/application
+  [1m[36mCrypto Load (0.2ms)[0m  [1m[34mSELECT "cryptos".* FROM "cryptos"[0m
+  Rendered cryptos/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 26ms (Views: 24.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cryptos/1/edit" for 127.0.0.1 at 2018-02-04 15:42:34 -0500
+Processing by CryptosController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCrypto Load (0.2ms)[0m  [1m[34mSELECT  "cryptos".* FROM "cryptos" WHERE "cryptos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering cryptos/edit.html.erb within layouts/application
+  Rendered cryptos/edit.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 28ms (Views: 25.8ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/cryptos/1" for 127.0.0.1 at 2018-02-04 15:42:38 -0500
+Processing by CryptosController#update as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"w67pGEfHaONbi9YZ5ub8L+NcjTVfblCB2qKJETgQxTFK4L85QyUR0/Zg+ixf7Z/AfDByOBCkmESbpP+Ff3u+HA==", "crypto"=>{"name"=>"bitcoinCash", "short_name"=>"btc", "date_of_birth"=>"2007-01-01"}, "commit"=>"Update Crypto", "id"=>"1"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant CryptosController::Article):
+  
+app/controllers/cryptos_controller.rb:35:in `update'
+Started PATCH "/cryptos/1" for 127.0.0.1 at 2018-02-04 15:43:11 -0500
+Processing by CryptosController#update as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"w67pGEfHaONbi9YZ5ub8L+NcjTVfblCB2qKJETgQxTFK4L85QyUR0/Zg+ixf7Z/AfDByOBCkmESbpP+Ff3u+HA==", "crypto"=>{"name"=>"bitcoinCash", "short_name"=>"btc", "date_of_birth"=>"2007-01-01"}, "commit"=>"Update Crypto", "id"=>"1"}
+Completed 500 Internal Server Error in 2ms
+
+
+  
+NameError (uninitialized constant CryptosController::Article):
+  
+app/controllers/cryptos_controller.rb:35:in `update'
+Started PATCH "/cryptos/1" for 127.0.0.1 at 2018-02-04 15:43:12 -0500
+Processing by CryptosController#update as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"w67pGEfHaONbi9YZ5ub8L+NcjTVfblCB2qKJETgQxTFK4L85QyUR0/Zg+ixf7Z/AfDByOBCkmESbpP+Ff3u+HA==", "crypto"=>{"name"=>"bitcoinCash", "short_name"=>"btc", "date_of_birth"=>"2007-01-01"}, "commit"=>"Update Crypto", "id"=>"1"}
+Completed 500 Internal Server Error in 2ms
+
+
+  
+NameError (uninitialized constant CryptosController::Article):
+  
+app/controllers/cryptos_controller.rb:35:in `update'
+Started PATCH "/cryptos/1" for 127.0.0.1 at 2018-02-04 15:43:35 -0500
+Processing by CryptosController#update as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"w67pGEfHaONbi9YZ5ub8L+NcjTVfblCB2qKJETgQxTFK4L85QyUR0/Zg+ixf7Z/AfDByOBCkmESbpP+Ff3u+HA==", "crypto"=>{"name"=>"bitcoinCash", "short_name"=>"btc", "date_of_birth"=>"2007-01-01"}, "commit"=>"Update Crypto", "id"=>"1"}
+  [1m[36mCrypto Load (0.3ms)[0m  [1m[34mSELECT  "cryptos".* FROM "cryptos" WHERE "cryptos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[33mUPDATE "cryptos" SET "name" = ?, "updated_at" = ? WHERE "cryptos"."id" = ?[0m  [["name", "bitcoinCash"], ["updated_at", "2018-02-04 20:43:35.587379"], ["id", 1]]
+  [1m[35m (129.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/cryptos/1
+Completed 200 OK in 150ms (ActiveRecord: 132.4ms)
+
+
+Started GET "/cryptos/1" for 127.0.0.1 at 2018-02-04 15:43:35 -0500
+Processing by CryptosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCrypto Load (0.2ms)[0m  [1m[34mSELECT  "cryptos".* FROM "cryptos" WHERE "cryptos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering cryptos/show.html.erb within layouts/application
+  Rendered cryptos/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 26ms (Views: 23.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cryptos" for 127.0.0.1 at 2018-02-04 15:43:37 -0500
+Processing by CryptosController#index as HTML
+  Rendering cryptos/index.html.erb within layouts/application
+  [1m[36mCrypto Load (0.3ms)[0m  [1m[34mSELECT "cryptos".* FROM "cryptos"[0m
+  Rendered cryptos/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 28ms (Views: 26.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cryptos/1" for 127.0.0.1 at 2018-02-04 15:46:28 -0500
+Processing by CryptosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCrypto Load (0.2ms)[0m  [1m[34mSELECT  "cryptos".* FROM "cryptos" WHERE "cryptos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering cryptos/show.html.erb within layouts/application
+  Rendered cryptos/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 32ms (Views: 30.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cryptos/1/edit" for 127.0.0.1 at 2018-02-04 15:46:31 -0500
+Processing by CryptosController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCrypto Load (0.2ms)[0m  [1m[34mSELECT  "cryptos".* FROM "cryptos" WHERE "cryptos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering cryptos/edit.html.erb within layouts/application
+  Rendered cryptos/edit.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 27ms (Views: 25.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cryptos" for 127.0.0.1 at 2018-02-04 15:46:42 -0500
+Processing by CryptosController#index as HTML
+  Rendering cryptos/index.html.erb within layouts/application
+  [1m[36mCrypto Load (0.2ms)[0m  [1m[34mSELECT "cryptos".* FROM "cryptos"[0m
+  Rendered cryptos/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 27ms (Views: 25.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cryptos/1/edit" for 127.0.0.1 at 2018-02-04 15:46:43 -0500
+Processing by CryptosController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCrypto Load (0.1ms)[0m  [1m[34mSELECT  "cryptos".* FROM "cryptos" WHERE "cryptos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering cryptos/edit.html.erb within layouts/application
+  Rendered cryptos/_form.html.erb (2.4ms)
+  Rendered cryptos/edit.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 45ms (Views: 43.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/cryptos/1" for 127.0.0.1 at 2018-02-04 15:46:45 -0500
+Processing by CryptosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCrypto Load (0.2ms)[0m  [1m[34mSELECT  "cryptos".* FROM "cryptos" WHERE "cryptos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering cryptos/show.html.erb within layouts/application
+  Rendered cryptos/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 23ms (Views: 19.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cryptos/new" for 127.0.0.1 at 2018-02-04 15:47:09 -0500
+Processing by CryptosController#new as HTML
+  Rendering cryptos/new.html.erb within layouts/application
+  Rendered cryptos/_form.html.erb (2.2ms)
+  Rendered cryptos/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 29ms (Views: 27.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cryptos" for 127.0.0.1 at 2018-02-04 15:50:08 -0500
+Processing by CryptosController#index as HTML
+  Rendering cryptos/index.html.erb within layouts/application
+  [1m[36mCrypto Load (0.2ms)[0m  [1m[34mSELECT "cryptos".* FROM "cryptos"[0m
+  Rendered cryptos/index.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 51ms (Views: 45.9ms | ActiveRecord: 1.4ms)
+
+
+Started DELETE "/cryptos/1" for 127.0.0.1 at 2018-02-04 15:50:17 -0500
+Processing by CryptosController#destroy as HTML
+  Parameters: {"authenticity_token"=>"8RtMQAMjZa1prj+oo/HyKNnU3uelRq/UjYaS5hqZlOA4G5+uNpMf4ObMgx1WDhiOjUpmKC1JghbXXHwIbAiFbA==", "id"=>"1"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant CryptosController::Article):
+  
+app/controllers/cryptos_controller.rb:46:in `destroy'
+Started DELETE "/cryptos/1" for 127.0.0.1 at 2018-02-04 15:50:39 -0500
+Processing by CryptosController#destroy as HTML
+  Parameters: {"authenticity_token"=>"8RtMQAMjZa1prj+oo/HyKNnU3uelRq/UjYaS5hqZlOA4G5+uNpMf4ObMgx1WDhiOjUpmKC1JghbXXHwIbAiFbA==", "id"=>"1"}
+Completed 500 Internal Server Error in 3ms
+
+
+  
+NameError (uninitialized constant CryptosController::Crytpo):
+  
+app/controllers/cryptos_controller.rb:46:in `destroy'
+Started GET "/cryptos" for 127.0.0.1 at 2018-02-04 15:51:00 -0500
+Processing by CryptosController#index as HTML
+  Rendering cryptos/index.html.erb within layouts/application
+  [1m[36mCrypto Load (0.2ms)[0m  [1m[34mSELECT "cryptos".* FROM "cryptos"[0m
+  Rendered cryptos/index.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 44ms (Views: 40.4ms | ActiveRecord: 1.7ms)
+
+
+Started DELETE "/cryptos/1" for 127.0.0.1 at 2018-02-04 15:51:05 -0500
+Processing by CryptosController#destroy as HTML
+  Parameters: {"authenticity_token"=>"VqJUSol/mwC+dx7s9IwTaEcluSWYVABZXMtyWGmfD0qfooekvM/hTTEVolkBc/nOE7sB6hBbLZsGEZy2Hw4exg==", "id"=>"1"}
+  [1m[36mCrypto Load (0.4ms)[0m  [1m[34mSELECT  "cryptos".* FROM "cryptos" WHERE "cryptos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "cryptos" WHERE "cryptos"."id" = ?[0m  [["id", 1]]
+  [1m[35m (20.8ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 245ms (ActiveRecord: 22.2ms)
+
+
+  
+NameError (undefined local variable or method `articles_path' for #<CryptosController:0x00007fd4ecf8c730>):
+  
+app/controllers/cryptos_controller.rb:49:in `destroy'
+Started DELETE "/cryptos/1" for 127.0.0.1 at 2018-02-04 15:51:16 -0500
+Processing by CryptosController#destroy as HTML
+  Parameters: {"authenticity_token"=>"VqJUSol/mwC+dx7s9IwTaEcluSWYVABZXMtyWGmfD0qfooekvM/hTTEVolkBc/nOE7sB6hBbLZsGEZy2Hw4exg==", "id"=>"1"}
+  [1m[36mCrypto Load (0.3ms)[0m  [1m[34mSELECT  "cryptos".* FROM "cryptos" WHERE "cryptos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 404 Not Found in 7ms (ActiveRecord: 1.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Crypto with 'id'=1):
+  
+app/controllers/cryptos_controller.rb:46:in `destroy'
+Started GET "/cryptos/" for 127.0.0.1 at 2018-02-04 15:51:21 -0500
+Processing by CryptosController#index as HTML
+  Rendering cryptos/index.html.erb within layouts/application
+  [1m[36mCrypto Load (0.3ms)[0m  [1m[34mSELECT "cryptos".* FROM "cryptos"[0m
+  Rendered cryptos/index.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 56ms (Views: 53.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cryptos/new" for 127.0.0.1 at 2018-02-04 15:51:23 -0500
+Processing by CryptosController#new as HTML
+  Rendering cryptos/new.html.erb within layouts/application
+  Rendered cryptos/_form.html.erb (3.2ms)
+  Rendered cryptos/new.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 41ms (Views: 39.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/cryptos" for 127.0.0.1 at 2018-02-04 15:51:35 -0500
+Processing by CryptosController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2+9iK5YAFI3wL5d85sKZzWll/8EAcrAQtGFtNbWlfqXNB/l9ynUaq26vLcqpxIwxe9Lic3LkJb86nYtnGDY+Ng==", "crypto"=>{"name"=>"new super crypto", "short_name"=>"crypto", "date_of_birth"=>"2018-02-07"}, "commit"=>"Create Crypto"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering cryptos/new.html.erb within layouts/application
+  Rendered cryptos/_form.html.erb (14.5ms)
+  Rendered cryptos/new.html.erb within layouts/application (23.2ms)
+Completed 200 OK in 63ms (Views: 59.9ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/cryptos" for 127.0.0.1 at 2018-02-04 15:51:39 -0500
+Processing by CryptosController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2+9iK5YAFI3wL5d85sKZzWll/8EAcrAQtGFtNbWlfqXNB/l9ynUaq26vLcqpxIwxe9Lic3LkJb86nYtnGDY+Ng==", "crypto"=>{"name"=>"new super crypto", "short_name"=>"cryptoasd", "date_of_birth"=>"2018-02-07"}, "commit"=>"Create Crypto"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering cryptos/new.html.erb within layouts/application
+  Rendered cryptos/_form.html.erb (8.1ms)
+  Rendered cryptos/new.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 64ms (Views: 60.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/cryptos" for 127.0.0.1 at 2018-02-04 15:51:40 -0500
+Processing by CryptosController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2+9iK5YAFI3wL5d85sKZzWll/8EAcrAQtGFtNbWlfqXNB/l9ynUaq26vLcqpxIwxe9Lic3LkJb86nYtnGDY+Ng==", "crypto"=>{"name"=>"new super crypto", "short_name"=>"cryptoasd", "date_of_birth"=>"2018-02-07"}, "commit"=>"Create Crypto"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering cryptos/new.html.erb within layouts/application
+  Rendered cryptos/_form.html.erb (3.9ms)
+  Rendered cryptos/new.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 58ms (Views: 53.4ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/cryptos" for 127.0.0.1 at 2018-02-04 15:51:40 -0500
+Processing by CryptosController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2+9iK5YAFI3wL5d85sKZzWll/8EAcrAQtGFtNbWlfqXNB/l9ynUaq26vLcqpxIwxe9Lic3LkJb86nYtnGDY+Ng==", "crypto"=>{"name"=>"new super crypto", "short_name"=>"cryptoasd", "date_of_birth"=>"2018-02-07"}, "commit"=>"Create Crypto"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering cryptos/new.html.erb within layouts/application
+  Rendered cryptos/_form.html.erb (4.8ms)
+  Rendered cryptos/new.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 45ms (Views: 40.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/cryptos" for 127.0.0.1 at 2018-02-04 15:51:40 -0500
+Processing by CryptosController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2+9iK5YAFI3wL5d85sKZzWll/8EAcrAQtGFtNbWlfqXNB/l9ynUaq26vLcqpxIwxe9Lic3LkJb86nYtnGDY+Ng==", "crypto"=>{"name"=>"new super crypto", "short_name"=>"cryptoasd", "date_of_birth"=>"2018-02-07"}, "commit"=>"Create Crypto"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering cryptos/new.html.erb within layouts/application
+  Rendered cryptos/_form.html.erb (4.2ms)
+  Rendered cryptos/new.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 79ms (Views: 74.9ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/cryptos" for 127.0.0.1 at 2018-02-04 15:51:40 -0500
+Processing by CryptosController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2+9iK5YAFI3wL5d85sKZzWll/8EAcrAQtGFtNbWlfqXNB/l9ynUaq26vLcqpxIwxe9Lic3LkJb86nYtnGDY+Ng==", "crypto"=>{"name"=>"new super crypto", "short_name"=>"cryptoasd", "date_of_birth"=>"2018-02-07"}, "commit"=>"Create Crypto"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  Rendering cryptos/new.html.erb within layouts/application
+  Rendered cryptos/_form.html.erb (4.6ms)
+  Rendered cryptos/new.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 52ms (Views: 48.8ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/cryptos" for 127.0.0.1 at 2018-02-04 15:51:40 -0500
+Processing by CryptosController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2+9iK5YAFI3wL5d85sKZzWll/8EAcrAQtGFtNbWlfqXNB/l9ynUaq26vLcqpxIwxe9Lic3LkJb86nYtnGDY+Ng==", "crypto"=>{"name"=>"new super crypto", "short_name"=>"cryptoasd", "date_of_birth"=>"2018-02-07"}, "commit"=>"Create Crypto"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering cryptos/new.html.erb within layouts/application
+  Rendered cryptos/_form.html.erb (4.9ms)
+  Rendered cryptos/new.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 42ms (Views: 39.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/cryptos" for 127.0.0.1 at 2018-02-04 15:51:41 -0500
+Processing by CryptosController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2+9iK5YAFI3wL5d85sKZzWll/8EAcrAQtGFtNbWlfqXNB/l9ynUaq26vLcqpxIwxe9Lic3LkJb86nYtnGDY+Ng==", "crypto"=>{"name"=>"new super crypto", "short_name"=>"cryptoasd", "date_of_birth"=>"2018-02-07"}, "commit"=>"Create Crypto"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering cryptos/new.html.erb within layouts/application
+  Rendered cryptos/_form.html.erb (2.7ms)
+  Rendered cryptos/new.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 41ms (Views: 38.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/cryptos" for 127.0.0.1 at 2018-02-04 15:52:06 -0500
+Processing by CryptosController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2+9iK5YAFI3wL5d85sKZzWll/8EAcrAQtGFtNbWlfqXNB/l9ynUaq26vLcqpxIwxe9Lic3LkJb86nYtnGDY+Ng==", "crypto"=>{"name"=>"new super crypto", "short_name"=>"cryptoasd", "date_of_birth"=>"2018-02-07"}, "commit"=>"Create Crypto"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering cryptos/new.html.erb within layouts/application
+  Rendered cryptos/_form.html.erb (3.6ms)
+  Rendered cryptos/new.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 45ms (Views: 41.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cryptos" for 127.0.0.1 at 2018-02-04 15:52:07 -0500
+Processing by CryptosController#index as HTML
+  Rendering cryptos/index.html.erb within layouts/application
+  [1m[36mCrypto Load (0.2ms)[0m  [1m[34mSELECT "cryptos".* FROM "cryptos"[0m
+  Rendered cryptos/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 40ms (Views: 38.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cryptos/new" for 127.0.0.1 at 2018-02-04 15:52:08 -0500
+Processing by CryptosController#new as HTML
+  Rendering cryptos/new.html.erb within layouts/application
+  Rendered cryptos/_form.html.erb (3.9ms)
+  Rendered cryptos/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 38ms (Views: 37.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/cryptos" for 127.0.0.1 at 2018-02-04 15:52:28 -0500
+Processing by CryptosController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vurfUTm2ObyWDsGR9kKJKFmiDR0wJxEHg8XagQtgqB+oAkQHZcM3mgiOeye5RJzUSxUQr0KxhKgNOTzTpvPojA==", "crypto"=>{"name"=>"new super crypto", "short_name"=>"crypt", "date_of_birth"=>"2018-03-01"}, "commit"=>"Create Crypto"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.8ms)[0m  [1m[32mINSERT INTO "cryptos" ("name", "short_name", "date_of_birth", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "new super crypto"], ["short_name", "crypt"], ["date_of_birth", "2018-03-01"], ["created_at", "2018-02-04 20:52:28.076805"], ["updated_at", "2018-02-04 20:52:28.076805"]]
+  [1m[35m (29.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/cryptos/4
+Completed 200 OK in 35ms (ActiveRecord: 30.9ms)
+
+
+Started GET "/cryptos/4" for 127.0.0.1 at 2018-02-04 15:52:28 -0500
+Processing by CryptosController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCrypto Load (0.2ms)[0m  [1m[34mSELECT  "cryptos".* FROM "cryptos" WHERE "cryptos"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering cryptos/show.html.erb within layouts/application
+  Rendered cryptos/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 31ms (Views: 29.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cryptos" for 127.0.0.1 at 2018-02-04 15:52:42 -0500
+Processing by CryptosController#index as HTML
+  Rendering cryptos/index.html.erb within layouts/application
+  [1m[36mCrypto Load (0.2ms)[0m  [1m[34mSELECT "cryptos".* FROM "cryptos"[0m
+  Rendered cryptos/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 26ms (Views: 24.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cryptos/4/edit" for 127.0.0.1 at 2018-02-04 15:52:45 -0500
+Processing by CryptosController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCrypto Load (0.2ms)[0m  [1m[34mSELECT  "cryptos".* FROM "cryptos" WHERE "cryptos"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering cryptos/edit.html.erb within layouts/application
+  Rendered cryptos/_form.html.erb (2.7ms)
+  Rendered cryptos/edit.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 41ms (Views: 39.0ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/cryptos/4" for 127.0.0.1 at 2018-02-04 15:52:50 -0500
+Processing by CryptosController#update as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nK5JfFa1TrGWSmW8cKoP61iDTwjpPCdJiM2f6+4TCWc6rJxZxhYSfrfWJW3ARO1e3BytG9UrIK31N1/7qW9xog==", "crypto"=>{"name"=>"new super crypto 2", "short_name"=>"crypt", "date_of_birth"=>"2018-03-01"}, "commit"=>"Update Crypto", "id"=>"4"}
+  [1m[36mCrypto Load (0.2ms)[0m  [1m[34mSELECT  "cryptos".* FROM "cryptos" WHERE "cryptos"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.8ms)[0m  [1m[33mUPDATE "cryptos" SET "name" = ?, "updated_at" = ? WHERE "cryptos"."id" = ?[0m  [["name", "new super crypto 2"], ["updated_at", "2018-02-04 20:52:50.456899"], ["id", 4]]
+  [1m[35m (38.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/cryptos/4
+Completed 200 OK in 46ms (ActiveRecord: 40.3ms)
+
+
+Started GET "/cryptos/4" for 127.0.0.1 at 2018-02-04 15:52:50 -0500
+Processing by CryptosController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCrypto Load (0.1ms)[0m  [1m[34mSELECT  "cryptos".* FROM "cryptos" WHERE "cryptos"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering cryptos/show.html.erb within layouts/application
+  Rendered cryptos/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 26ms (Views: 24.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/cryptos" for 127.0.0.1 at 2018-02-04 15:52:52 -0500
+Processing by CryptosController#index as HTML
+  Rendering cryptos/index.html.erb within layouts/application
+  [1m[36mCrypto Load (0.3ms)[0m  [1m[34mSELECT "cryptos".* FROM "cryptos"[0m
+  Rendered cryptos/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 43ms (Views: 42.1ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/cryptos/4" for 127.0.0.1 at 2018-02-04 15:52:58 -0500
+Processing by CryptosController#destroy as HTML
+  Parameters: {"authenticity_token"=>"nVGq0uj7/bRrg+HCjK+jW+QjyjEVA/PUz55uwC6V6tpUUXk83UuH+eThXXd5UEn9sL1y/p0M3haVRIAuWAT7Vg==", "id"=>"4"}
+  [1m[36mCrypto Load (0.2ms)[0m  [1m[34mSELECT  "cryptos".* FROM "cryptos" WHERE "cryptos"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[31mDELETE FROM "cryptos" WHERE "cryptos"."id" = ?[0m  [["id", 4]]
+  [1m[35m (28.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/cryptos/4
+Completed 302 Found in 36ms (ActiveRecord: 30.5ms)
+
+
+Started GET "/cryptos/4" for 127.0.0.1 at 2018-02-04 15:52:58 -0500
+Processing by CryptosController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCrypto Load (0.1ms)[0m  [1m[34mSELECT  "cryptos".* FROM "cryptos" WHERE "cryptos"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Crypto with 'id'=4):
+  
+app/controllers/cryptos_controller.rb:10:in `show'
+Started GET "/cryptos" for 127.0.0.1 at 2018-02-04 15:53:07 -0500
+Processing by CryptosController#index as HTML
+  Rendering cryptos/index.html.erb within layouts/application
+  [1m[36mCrypto Load (0.4ms)[0m  [1m[34mSELECT "cryptos".* FROM "cryptos"[0m
+  Rendered cryptos/index.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 45ms (Views: 42.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cryptos/new" for 127.0.0.1 at 2018-02-04 15:53:10 -0500
+Processing by CryptosController#new as HTML
+  Rendering cryptos/new.html.erb within layouts/application
+  Rendered cryptos/_form.html.erb (2.2ms)
+  Rendered cryptos/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 37ms (Views: 35.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/cryptos" for 127.0.0.1 at 2018-02-04 15:53:18 -0500
+Processing by CryptosController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LGCztKQA1tqxRUyx0MMOct0sZV3Kj99Sika22sm3qIo6iCji+HXY/C/F9gefxRuOz5t477gZSv0EulCIZCToGQ==", "crypto"=>{"name"=>"new super crypto", "short_name"=>"asda", "date_of_birth"=>""}, "commit"=>"Create Crypto"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.8ms)[0m  [1m[32mINSERT INTO "cryptos" ("name", "short_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "new super crypto"], ["short_name", "asda"], ["created_at", "2018-02-04 20:53:18.444169"], ["updated_at", "2018-02-04 20:53:18.444169"]]
+  [1m[35m (47.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/cryptos/5
+Completed 200 OK in 54ms (ActiveRecord: 49.2ms)
+
+
+Started GET "/cryptos/5" for 127.0.0.1 at 2018-02-04 15:53:18 -0500
+Processing by CryptosController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCrypto Load (0.2ms)[0m  [1m[34mSELECT  "cryptos".* FROM "cryptos" WHERE "cryptos"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering cryptos/show.html.erb within layouts/application
+  Rendered cryptos/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 29ms (Views: 25.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cryptos" for 127.0.0.1 at 2018-02-04 15:53:27 -0500
+Processing by CryptosController#index as HTML
+  Rendering cryptos/index.html.erb within layouts/application
+  [1m[36mCrypto Load (0.4ms)[0m  [1m[34mSELECT "cryptos".* FROM "cryptos"[0m
+  Rendered cryptos/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 37ms (Views: 34.7ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/cryptos/5" for 127.0.0.1 at 2018-02-04 15:53:32 -0500
+Processing by CryptosController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Wji1coj55vsxaQkeAnDTERp+ycDGE3am30tLQrvLOhqTOGacvUmctr4Ltav3jzm3TuBxD04cW2SFkaWszVorlg==", "id"=>"5"}
+  [1m[36mCrypto Load (0.2ms)[0m  [1m[34mSELECT  "cryptos".* FROM "cryptos" WHERE "cryptos"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[31mDELETE FROM "cryptos" WHERE "cryptos"."id" = ?[0m  [["id", 5]]
+  [1m[35m (5.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/cryptos/5
+Completed 302 Found in 11ms (ActiveRecord: 7.8ms)
+
+
+Started GET "/cryptos/5" for 127.0.0.1 at 2018-02-04 15:53:32 -0500
+Processing by CryptosController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCrypto Load (0.2ms)[0m  [1m[34mSELECT  "cryptos".* FROM "cryptos" WHERE "cryptos"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Crypto with 'id'=5):
+  
+app/controllers/cryptos_controller.rb:10:in `show'
+Started GET "/cryptos/5" for 127.0.0.1 at 2018-02-04 15:54:05 -0500
+Processing by CryptosController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCrypto Load (0.4ms)[0m  [1m[34mSELECT  "cryptos".* FROM "cryptos" WHERE "cryptos"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Completed 404 Not Found in 12ms (ActiveRecord: 2.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Crypto with 'id'=5):
+  
+app/controllers/cryptos_controller.rb:10:in `show'
+Started GET "/cryptos" for 127.0.0.1 at 2018-02-04 15:54:08 -0500
+Processing by CryptosController#index as HTML
+  Rendering cryptos/index.html.erb within layouts/application
+  [1m[36mCrypto Load (0.2ms)[0m  [1m[34mSELECT "cryptos".* FROM "cryptos"[0m
+  Rendered cryptos/index.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 43ms (Views: 41.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cryptos/new" for 127.0.0.1 at 2018-02-04 15:54:10 -0500
+Processing by CryptosController#new as HTML
+  Rendering cryptos/new.html.erb within layouts/application
+  Rendered cryptos/_form.html.erb (2.6ms)
+  Rendered cryptos/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 34ms (Views: 32.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/cryptos" for 127.0.0.1 at 2018-02-04 15:54:16 -0500
+Processing by CryptosController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wdo0azQBSe7JaqUhKYbp7ihM5US+MwnIoZEW9+G43pTXMq89aHRHyFfqH5dmgPwSOvv49sylnGcvbfClTCueBw==", "crypto"=>{"name"=>"new super crypto", "short_name"=>"asd", "date_of_birth"=>""}, "commit"=>"Create Crypto"}
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.3ms)[0m  [1m[32mINSERT INTO "cryptos" ("name", "short_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "new super crypto"], ["short_name", "asd"], ["created_at", "2018-02-04 20:54:16.192392"], ["updated_at", "2018-02-04 20:54:16.192392"]]
+  [1m[35m (12.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/cryptos/6
+Completed 200 OK in 21ms (ActiveRecord: 14.7ms)
+
+
+Started GET "/cryptos/6" for 127.0.0.1 at 2018-02-04 15:54:16 -0500
+Processing by CryptosController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mCrypto Load (0.2ms)[0m  [1m[34mSELECT  "cryptos".* FROM "cryptos" WHERE "cryptos"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering cryptos/show.html.erb within layouts/application
+  Rendered cryptos/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 43ms (Views: 40.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cryptos" for 127.0.0.1 at 2018-02-04 15:54:17 -0500
+Processing by CryptosController#index as HTML
+  Rendering cryptos/index.html.erb within layouts/application
+  [1m[36mCrypto Load (0.2ms)[0m  [1m[34mSELECT "cryptos".* FROM "cryptos"[0m
+  Rendered cryptos/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 32ms (Views: 30.3ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/cryptos/6" for 127.0.0.1 at 2018-02-04 15:54:22 -0500
+Processing by CryptosController#destroy as HTML
+  Parameters: {"authenticity_token"=>"miTcfcegTynxv28MRoX+3iHvZ16LnNTvk1OCCqsg56BTJA+T8hA1ZH7d07mzehR4dXHfkQOT+S3JiWzk3bH2LA==", "id"=>"6"}
+  [1m[36mCrypto Load (0.2ms)[0m  [1m[34mSELECT  "cryptos".* FROM "cryptos" WHERE "cryptos"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "cryptos" WHERE "cryptos"."id" = ?[0m  [["id", 6]]
+  [1m[35m (27.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/cryptos
+Completed 302 Found in 31ms (ActiveRecord: 27.6ms)
+
+
+Started GET "/cryptos" for 127.0.0.1 at 2018-02-04 15:54:22 -0500
+Processing by CryptosController#index as HTML
+  Rendering cryptos/index.html.erb within layouts/application
+  [1m[36mCrypto Load (0.2ms)[0m  [1m[34mSELECT "cryptos".* FROM "cryptos"[0m
+  Rendered cryptos/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 25ms (Views: 22.7ms | ActiveRecord: 0.2ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateInfoAtTimes (20180204205740)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "info_at_times" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "time" datetime, "price" float, "market_cap" float, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180204205740"]]
+  [1m[35m (22.5ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddRefernceToInfoAtTime (20180204212804)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "info_at_times" ADD "crypto_id" integer[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_info_at_times_on_crypto_id" ON "info_at_times" ("crypto_id")[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180204212804"]]
+  [1m[35m (5.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_info_at_times_on_crypto_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_info_at_times_on_crypto_id' AND type='index'
+[0m
+Started GET "/cryptos" for 127.0.0.1 at 2018-02-04 16:28:57 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CryptosController#index as HTML
+  Rendering cryptos/index.html.erb within layouts/application
+  [1m[36mCrypto Load (0.6ms)[0m  [1m[34mSELECT "cryptos".* FROM "cryptos"[0m
+  Rendered cryptos/index.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 64ms (Views: 56.9ms | ActiveRecord: 2.6ms)
+
+
